@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="arm-bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070c18"/>
+      <stop offset="50%" stop-color="#0b1326"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+    <linearGradient id="hud-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <filter id="cv-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="800" height="450" rx="16" fill="url(#arm-bg-grad)"/>
+
+  <!-- macOS Window Title Bar -->
+  <rect width="800" height="38" rx="16" fill="#0f172a"/>
+  <rect y="26" width="800" height="12" fill="#0f172a"/>
+  <circle cx="22" cy="19" r="6" fill="#ef4444"/>
+  <circle cx="42" cy="19" r="6" fill="#f59e0b"/>
+  <circle cx="62" cy="19" r="6" fill="#10b981"/>
+  
+  <text x="400" y="24" text-anchor="middle" fill="#94a3b8" font-family="'JetBrains Mono', 'Space Grotesk', monospace" font-size="11" font-weight="600">
+    RoboticArm-CV-Studio v2.4 &bull; Camera Feed [RGB 1080p @ 60 FPS] &bull; Python &amp; C++ Low-Latency Bridge
+  </text>
+  
+  <rect x="700" y="10" width="80" height="20" rx="10" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" stroke-width="1"/>
+  <circle cx="712" cy="20" r="3.5" fill="#10b981"/>
+  <text x="744" y="24" text-anchor="middle" fill="#a7f3d0" font-family="monospace" font-size="9" font-weight="700">ONLINE</text>
+
+  <!-- Top Status Strip -->
+  <rect x="18" y="48" width="540" height="28" rx="6" fill="rgba(15, 23, 42, 0.7)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="32" y="66" fill="#00f0ff" font-family="monospace" font-size="11" font-weight="700">● LIVE INFERENCE</text>
+  <text x="175" y="66" fill="#cbd5e1" font-family="monospace" font-size="11">Latency: 12ms | Resolution: 1920x1080 | Tracking: 3 Objects Active</text>
+
+  <!-- Main Viewport: Camera & Robotic Arm Workcell -->
+  <rect x="18" y="86" width="540" height="346" rx="10" fill="#080d1a" stroke="rgba(0, 240, 255, 0.25)" stroke-width="1.2"/>
+  
+  <!-- Subtle Grid Floor / Perspective Grid -->
+  <g stroke="rgba(0, 240, 255, 0.08)" stroke-width="1">
+    <line x1="18" y1="200" x2="558" y2="200"/>
+    <line x1="18" y1="260" x2="558" y2="260"/>
+    <line x1="18" y1="320" x2="558" y2="320"/>
+    <line x1="18" y1="380" x2="558" y2="380"/>
+    <line x1="80" y1="86" x2="40" y2="432"/>
+    <line x1="180" y1="86" x2="160" y2="432"/>
+    <line x1="280" y1="86" x2="280" y2="432"/>
+    <line x1="380" y1="86" x2="400" y2="432"/>
+    <line x1="480" y1="86" x2="520" y2="432"/>
+  </g>
+
+  <!-- Camera HUD Targeting Crosshairs -->
+  <circle cx="280" cy="250" r="130" fill="none" stroke="rgba(0, 240, 255, 0.15)" stroke-width="1.5" stroke-dasharray="12 8"/>
+  <circle cx="280" cy="250" r="45" fill="none" stroke="rgba(0, 240, 255, 0.25)" stroke-width="1"/>
+  <line x1="250" y1="250" x2="310" y2="250" stroke="#00f0ff" stroke-width="1.5"/>
+  <line x1="280" y1="220" x2="280" y2="280" stroke="#00f0ff" stroke-width="1.5"/>
+
+  <!-- HUD Corner Brackets -->
+  <path d="M 32 100 L 55 100 M 32 100 L 32 123" stroke="#00f0ff" stroke-width="2" fill="none"/>
+  <path d="M 544 100 L 521 100 M 544 100 L 544 123" stroke="#00f0ff" stroke-width="2" fill="none"/>
+  <path d="M 32 418 L 55 418 M 32 418 L 32 395" stroke="#00f0ff" stroke-width="2" fill="none"/>
+  <path d="M 544 418 L 521 418 M 544 418 L 544 395" stroke="#00f0ff" stroke-width="2" fill="none"/>
+
+  <!-- Robotic Arm Architecture Silhouette -->
+  <!-- Base Mount -->
+  <rect x="75" y="375" width="90" height="30" rx="5" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+  <circle cx="120" cy="375" r="24" fill="#0f172a" stroke="#00f0ff" stroke-width="3" filter="url(#cv-glow)"/>
+  
+  <!-- Joint 1 to Joint 2 -->
+  <line x1="120" y1="375" x2="175" y2="245" stroke="#38bdf8" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="175" cy="245" r="18" fill="#0f172a" stroke="#00f0ff" stroke-width="3"/>
+
+  <!-- Joint 2 to End Effector -->
+  <line x1="175" y1="245" x2="270" y2="185" stroke="#60a5fa" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="270" cy="185" r="14" fill="#0f172a" stroke="#00f0ff" stroke-width="2.5"/>
+
+  <!-- Gripper Wrist & Actuator moving down towards red cube -->
+  <line x1="270" y1="185" x2="280" y2="240" stroke="#93c5fd" stroke-width="7" stroke-linecap="round"/>
+  <path d="M 268 240 L 268 275 M 292 240 L 292 275" stroke="#00f0ff" stroke-width="3" fill="none"/>
+  <line x1="260" y1="240" x2="300" y2="240" stroke="#38bdf8" stroke-width="4"/>
+
+  <!-- Laser Alignment Guide targeting Red Object -->
+  <line x1="280" y1="240" x2="280" y2="300" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.8"/>
+
+  <!-- OBJECT 1: RED CUBE (TARGETED FOR PICK) -->
+  <g transform="translate(260, 295)" filter="url(#cv-glow)">
+    <!-- Bounding Box -->
+    <rect x="-10" y="-12" width="60" height="58" fill="rgba(239, 68, 68, 0.15)" stroke="#ef4444" stroke-width="2"/>
+    <!-- Classification Tag -->
+    <rect x="-10" y="-30" width="95" height="18" rx="4" fill="#ef4444"/>
+    <text x="37" y="-18" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="9" font-weight="700">RED OBJ: 99.4%</text>
+    <!-- 3D Cube -->
+    <rect x="5" y="5" width="30" height="30" rx="3" fill="#ef4444" opacity="0.9"/>
+    <polygon points="5,5 15,-5 45,-5 35,5" fill="#f87171"/>
+    <polygon points="35,5 45,-5 45,25 35,35" fill="#dc2626"/>
+    <!-- Coordinate tag -->
+    <text x="20" y="44" fill="#fca5a5" font-family="monospace" font-size="8">PICK [X:142 Y:218]</text>
+  </g>
+
+  <!-- OBJECT 2: GREEN CYLINDER (DETECTED) -->
+  <g transform="translate(410, 310)" filter="url(#cv-glow)">
+    <rect x="-10" y="-12" width="55" height="55" fill="rgba(34, 197, 94, 0.15)" stroke="#22c55e" stroke-width="2"/>
+    <rect x="-10" y="-30" width="95" height="18" rx="4" fill="#22c55e"/>
+    <text x="37" y="-18" text-anchor="middle" fill="#052e16" font-family="monospace" font-size="9" font-weight="700">GRN OBJ: 98.7%</text>
+    <!-- 3D Cylinder -->
+    <ellipse cx="17" cy="8" rx="14" ry="7" fill="#86efac"/>
+    <rect x="3" y="8" width="28" height="20" fill="#22c55e"/>
+    <ellipse cx="17" cy="28" rx="14" ry="7" fill="#16a34a"/>
+    <text x="17" y="42" fill="#86efac" font-family="monospace" font-size="8">QUEUED</text>
+  </g>
+
+  <!-- OBJECT 3: BLUE SPHERE (DETECTED) -->
+  <g transform="translate(460, 210)" filter="url(#cv-glow)">
+    <rect x="-10" y="-12" width="52" height="52" fill="rgba(59, 130, 246, 0.15)" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="-10" y="-30" width="95" height="18" rx="4" fill="#3b82f6"/>
+    <text x="37" y="-18" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="9" font-weight="700">BLU OBJ: 99.1%</text>
+    <!-- 3D Sphere with radial highlight -->
+    <circle cx="16" cy="14" r="15" fill="#3b82f6"/>
+    <circle cx="12" cy="10" r="5" fill="#93c5fd" opacity="0.6"/>
+    <text x="16" y="38" fill="#93c5fd" font-family="monospace" font-size="8">STANDBY</text>
+  </g>
+
+  <!-- RIGHT SIDEBAR: ROBOTICS TELEMETRY & KINEMATICS -->
+  <rect x="572" y="48" width="210" height="384" rx="10" fill="#0f172a" stroke="rgba(255,255,255,0.08)"/>
+
+  <!-- Sidebar Header -->
+  <rect x="572" y="48" width="210" height="34" rx="10" fill="#1e293b"/>
+  <text x="677" y="70" text-anchor="middle" fill="#f8fafc" font-family="monospace" font-size="11" font-weight="700">TELEMETRY &amp; KINEMATICS</text>
+
+  <!-- Joint Angles (J1 to J6) -->
+  <g transform="translate(586, 96)">
+    <text x="0" y="14" fill="#94a3b8" font-family="monospace" font-size="10">Inverse Kinematics</text>
+    
+    <text x="0" y="34" fill="#cbd5e1" font-family="monospace" font-size="10">J1 (Base):</text>
+    <text x="175" y="34" text-anchor="end" fill="#00f0ff" font-family="monospace" font-size="10" font-weight="700">+42.0&deg;</text>
+    <rect x="0" y="39" width="175" height="4" rx="2" fill="rgba(255,255,255,0.1)"/>
+    <rect x="0" y="39" width="110" height="4" rx="2" fill="#00f0ff"/>
+
+    <text x="0" y="58" fill="#cbd5e1" font-family="monospace" font-size="10">J2 (Shoulder):</text>
+    <text x="175" y="58" text-anchor="end" fill="#00f0ff" font-family="monospace" font-size="10" font-weight="700">-15.4&deg;</text>
+    <rect x="0" y="63" width="175" height="4" rx="2" fill="rgba(255,255,255,0.1)"/>
+    <rect x="0" y="63" width="75" height="4" rx="2" fill="#00f0ff"/>
+
+    <text x="0" y="82" fill="#cbd5e1" font-family="monospace" font-size="10">J3 (Elbow):</text>
+    <text x="175" y="82" text-anchor="end" fill="#00f0ff" font-family="monospace" font-size="10" font-weight="700">+88.2&deg;</text>
+    <rect x="0" y="87" width="175" height="4" rx="2" fill="rgba(255,255,255,0.1)"/>
+    <rect x="0" y="87" width="145" height="4" rx="2" fill="#00f0ff"/>
+
+    <text x="0" y="106" fill="#cbd5e1" font-family="monospace" font-size="10">J4-J6 (Wrist):</text>
+    <text x="175" y="106" text-anchor="end" fill="#38bdf8" font-family="monospace" font-size="10" font-weight="700">OPTIMAL</text>
+  </g>
+
+  <!-- Cycle Counter & Precision -->
+  <g transform="translate(586, 230)">
+    <rect x="0" y="0" width="182" height="70" rx="8" fill="rgba(15, 23, 42, 0.9)" stroke="rgba(0, 240, 255, 0.3)"/>
+    <text x="91" y="22" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="10">PICK &amp; PLACE CYCLES</text>
+    <text x="91" y="48" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="20" font-weight="800">1,428</text>
+    <text x="91" y="62" text-anchor="middle" fill="#10b981" font-family="monospace" font-size="9" font-weight="600">&bull; 99.6% Accuracy</text>
+  </g>
+
+  <!-- Color Classifier Confidence Meters -->
+  <g transform="translate(586, 320)">
+    <text x="0" y="14" fill="#94a3b8" font-family="monospace" font-size="10">Color Classifier HSV</text>
+    <text x="0" y="32" fill="#ef4444" font-family="monospace" font-size="9" font-weight="700">RED [0-10, 160-180]</text>
+    <text x="175" y="32" text-anchor="end" fill="#ef4444" font-family="monospace" font-size="9">99.4%</text>
+
+    <text x="0" y="52" fill="#22c55e" font-family="monospace" font-size="9" font-weight="700">GRN [35-85]</text>
+    <text x="175" y="52" text-anchor="end" fill="#22c55e" font-family="monospace" font-size="9">98.7%</text>
+
+    <text x="0" y="72" fill="#3b82f6" font-family="monospace" font-size="9" font-weight="700">BLU [100-140]</text>
+    <text x="175" y="72" text-anchor="end" fill="#3b82f6" font-family="monospace" font-size="9">99.1%</text>
+  </g>
+
+  <!-- Bottom Badge in Viewport -->
+  <rect x="32" y="394" width="220" height="24" rx="12" fill="rgba(15, 23, 42, 0.9)" stroke="rgba(255,255,255,0.2)"/>
+  <circle cx="45" cy="406" r="4" fill="#10b981"/>
+  <text x="56" y="410" fill="#cbd5e1" font-family="monospace" font-size="10" font-weight="600">Active Object: RED CUBE [PICK]</text>
+</svg>

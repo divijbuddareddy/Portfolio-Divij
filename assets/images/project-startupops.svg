@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="so-dark-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080c18"/>
+      <stop offset="50%" stop-color="#0d1427"/>
+      <stop offset="100%" stop-color="#060914"/>
+    </linearGradient>
+    <linearGradient id="agent-neon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="800" height="450" rx="16" fill="url(#so-dark-grad)"/>
+
+  <!-- macOS Window Title Bar -->
+  <rect width="800" height="38" rx="16" fill="#0f172a"/>
+  <rect y="26" width="800" height="12" fill="#0f172a"/>
+  <circle cx="22" cy="19" r="6" fill="#ef4444"/>
+  <circle cx="42" cy="19" r="6" fill="#f59e0b"/>
+  <circle cx="62" cy="19" r="6" fill="#10b981"/>
+  
+  <text x="400" y="24" text-anchor="middle" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">
+    StartupOps AI &bull; LangGraph Autonomous Multi-Agent Orchestrator &bull; PostgreSQL Persistent State
+  </text>
+  
+  <rect x="670" y="10" width="112" height="20" rx="10" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" stroke-width="1"/>
+  <circle cx="682" cy="20" r="3.5" fill="#10b981"/>
+  <text x="730" y="24" text-anchor="middle" fill="#a7f3d0" font-family="monospace" font-size="9" font-weight="700">7 AGENTS SYNC</text>
+
+  <!-- TOP TOOLBAR: INCIDENT STATUS -->
+  <rect x="18" y="48" width="764" height="32" rx="6" fill="rgba(15, 23, 42, 0.7)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="32" y="69" fill="#f43f5e" font-family="monospace" font-size="11" font-weight="700">INCIDENT #419</text>
+  <text x="145" y="69" fill="#cbd5e1" font-family="monospace" font-size="11">Cross-System API Latency Spike &bull; Severity: HIGH &bull; State: Persistent In PostgreSQL</text>
+  <rect x="635" y="54" width="135" height="20" rx="4" fill="rgba(56, 189, 248, 0.15)"/>
+  <text x="702" y="68" text-anchor="middle" fill="#38bdf8" font-family="monospace" font-size="9" font-weight="700">SUPERVISOR ROUTING</text>
+
+  <!-- LEFT PANEL: 7 SPECIALIZED AGENTS REGISTRY -->
+  <rect x="18" y="90" width="200" height="342" rx="10" fill="#0b1122" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="18" y="90" width="200" height="32" rx="10" fill="#131d36"/>
+  <text x="118" y="111" text-anchor="middle" fill="#f8fafc" font-family="monospace" font-size="10" font-weight="700">MULTI-AGENT REGISTRY</text>
+
+  <!-- 7 Agent Rows from Resume -->
+  <g transform="translate(28, 132)">
+    <!-- 1. Supervisor -->
+    <rect x="0" y="0" width="180" height="26" rx="5" fill="rgba(0, 240, 255, 0.12)" stroke="#00f0ff" stroke-width="1"/>
+    <circle cx="12" cy="13" r="3.5" fill="#00f0ff"/>
+    <text x="24" y="17" fill="#00f0ff" font-family="monospace" font-size="9" font-weight="700">SUPERVISOR AGENT</text>
+
+    <!-- 2. Planner -->
+    <rect x="0" y="32" width="180" height="26" rx="5" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255,255,255,0.08)"/>
+    <circle cx="12" cy="45" r="3.5" fill="#38bdf8"/>
+    <text x="24" y="49" fill="#cbd5e1" font-family="monospace" font-size="9">PLANNER AGENT</text>
+
+    <!-- 3. Research -->
+    <rect x="0" y="64" width="180" height="26" rx="5" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255,255,255,0.08)"/>
+    <circle cx="12" cy="77" r="3.5" fill="#818cf8"/>
+    <text x="24" y="81" fill="#cbd5e1" font-family="monospace" font-size="9">RESEARCH AGENT</text>
+
+    <!-- 4. Investigation -->
+    <rect x="0" y="96" width="180" height="26" rx="5" fill="rgba(168, 85, 247, 0.12)" stroke="#a855f7" stroke-width="1"/>
+    <circle cx="12" cy="109" r="3.5" fill="#a855f7"/>
+    <text x="24" y="113" fill="#c084fc" font-family="monospace" font-size="9" font-weight="700">INVESTIGATION AGENT</text>
+
+    <!-- 5. Signal -->
+    <rect x="0" y="128" width="180" height="26" rx="5" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255,255,255,0.08)"/>
+    <circle cx="12" cy="141" r="3.5" fill="#f43f5e"/>
+    <text x="24" y="145" fill="#cbd5e1" font-family="monospace" font-size="9">SIGNAL AGENT</text>
+
+    <!-- 6. Action -->
+    <rect x="0" y="160" width="180" height="26" rx="5" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255,255,255,0.08)"/>
+    <circle cx="12" cy="173" r="3.5" fill="#f59e0b"/>
+    <text x="24" y="177" fill="#cbd5e1" font-family="monospace" font-size="9">ACTION AGENT</text>
+
+    <!-- 7. Verification -->
+    <rect x="0" y="192" width="180" height="26" rx="5" fill="rgba(16, 185, 129, 0.12)" stroke="#10b981" stroke-width="1"/>
+    <circle cx="12" cy="205" r="3.5" fill="#10b981"/>
+    <text x="24" y="209" fill="#34d399" font-family="monospace" font-size="9" font-weight="700">VERIFICATION AGENT</text>
+  </g>
+
+  <!-- PostgreSQL Persistence Status Badge -->
+  <g transform="translate(28, 362)">
+    <rect x="0" y="0" width="180" height="54" rx="6" fill="#0f172a" stroke="#334155"/>
+    <text x="90" y="20" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="9">STATE STORE</text>
+    <text x="90" y="38" text-anchor="middle" fill="#00f0ff" font-family="monospace" font-size="10" font-weight="700">PostgreSQL Session OK</text>
+  </g>
+
+  <!-- CENTER PANEL: LANGGRAPH STATE GRAPH VISUALIZER -->
+  <rect x="228" y="90" width="344" height="342" rx="10" fill="#070a16" stroke="rgba(56, 189, 248, 0.25)" stroke-width="1.2"/>
+  <rect x="240" y="102" width="180" height="24" rx="12" fill="rgba(15, 23, 42, 0.9)" stroke="rgba(56, 189, 248, 0.4)"/>
+  <circle cx="252" cy="114" r="4" fill="#38bdf8"/>
+  <text x="264" y="118" fill="#e2e8f0" font-family="monospace" font-size="9" font-weight="700">LANGGRAPH CYCLIC GRAPH</text>
+
+  <!-- Graph Flow Interconnecting Lines -->
+  <g stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.6">
+    <line x1="400" y1="180" x2="310" y2="245"/>
+    <line x1="400" y1="180" x2="400" y2="245"/>
+    <line x1="400" y1="180" x2="490" y2="245"/>
+    <line x1="310" y1="285" x2="350" y2="340"/>
+    <line x1="400" y1="285" x2="400" y2="340"/>
+    <line x1="490" y1="285" x2="450" y2="340"/>
+    <line x1="350" y1="365" x2="450" y2="365"/>
+  </g>
+
+  <!-- Central Node: SUPERVISOR -->
+  <g transform="translate(400, 180)" filter="url(#neon-glow)">
+    <circle cx="0" cy="0" r="28" fill="#0f172a" stroke="#00f0ff" stroke-width="2.5"/>
+    <circle cx="0" cy="0" r="18" fill="#00f0ff" opacity="0.25"/>
+    <polygon points="0,-10 10,0 0,10 -10,0" fill="#00f0ff"/>
+  </g>
+  <text x="400" y="142" text-anchor="middle" fill="#00f0ff" font-family="monospace" font-size="10" font-weight="700">SUPERVISOR</text>
+
+  <!-- Secondary Nodes: Planner, Investigation, Signal -->
+  <g transform="translate(310, 265)" filter="url(#neon-glow)">
+    <rect x="-42" y="-18" width="84" height="36" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1.8"/>
+    <text x="0" y="4" text-anchor="middle" fill="#e2e8f0" font-family="monospace" font-size="9" font-weight="600">PLANNER</text>
+  </g>
+
+  <g transform="translate(400, 265)" filter="url(#neon-glow)">
+    <rect x="-50" y="-18" width="100" height="36" rx="8" fill="#1e1b4b" stroke="#a855f7" stroke-width="2"/>
+    <text x="0" y="4" text-anchor="middle" fill="#c084fc" font-family="monospace" font-size="9" font-weight="700">INVESTIGATE</text>
+  </g>
+
+  <g transform="translate(490, 265)" filter="url(#neon-glow)">
+    <rect x="-40" y="-18" width="80" height="36" rx="8" fill="#0f172a" stroke="#f43f5e" stroke-width="1.8"/>
+    <text x="0" y="4" text-anchor="middle" fill="#e2e8f0" font-family="monospace" font-size="9" font-weight="600">SIGNAL</text>
+  </g>
+
+  <!-- Tertiary Nodes: Action & Verification -->
+  <g transform="translate(340, 360)" filter="url(#neon-glow)">
+    <rect x="-45" y="-18" width="90" height="36" rx="8" fill="#1e293b" stroke="#f59e0b" stroke-width="1.8"/>
+    <text x="0" y="4" text-anchor="middle" fill="#fde68a" font-family="monospace" font-size="9" font-weight="600">ACTION</text>
+  </g>
+
+  <g transform="translate(460, 360)" filter="url(#neon-glow)">
+    <rect x="-50" y="-18" width="100" height="36" rx="8" fill="#064e3b" stroke="#10b981" stroke-width="2"/>
+    <text x="0" y="4" text-anchor="middle" fill="#a7f3d0" font-family="monospace" font-size="9" font-weight="700">VERIFICATION</text>
+  </g>
+
+  <!-- Animated Data Packet Pulses -->
+  <circle cx="355" cy="212" r="3.5" fill="#00f0ff" filter="url(#neon-glow)"/>
+  <circle cx="445" cy="212" r="3.5" fill="#f43f5e" filter="url(#neon-glow)"/>
+  <circle cx="400" cy="312" r="4" fill="#a855f7" filter="url(#neon-glow)"/>
+
+  <!-- RIGHT PANEL: INVESTIGATION & APPROVAL WORKFLOW -->
+  <rect x="582" y="90" width="200" height="342" rx="10" fill="#0b1122" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="582" y="90" width="200" height="32" rx="10" fill="#131d36"/>
+  <text x="682" y="111" text-anchor="middle" fill="#f8fafc" font-family="monospace" font-size="10" font-weight="700">APPROVAL WORKFLOW</text>
+
+  <!-- Investigation Findings Card -->
+  <g transform="translate(594, 134)">
+    <rect x="0" y="0" width="176" height="110" rx="8" fill="rgba(15, 23, 42, 0.9)" stroke="rgba(168, 85, 247, 0.3)"/>
+    <text x="10" y="18" fill="#c084fc" font-family="monospace" font-size="9" font-weight="700">&bull; Investigation Report:</text>
+    <text x="10" y="34" fill="#cbd5e1" font-family="'Space Grotesk', sans-serif" font-size="8.5">Discovered missing index</text>
+    <text x="10" y="46" fill="#cbd5e1" font-family="'Space Grotesk', sans-serif" font-size="8.5">on users.org_id during</text>
+    <text x="10" y="58" fill="#cbd5e1" font-family="'Space Grotesk', sans-serif" font-size="8.5">cross-system JOIN query.</text>
+
+    <text x="10" y="80" fill="#10b981" font-family="monospace" font-size="8.5">&bull; Evidence Grounded: 100%</text>
+    <text x="10" y="94" fill="#94a3b8" font-family="monospace" font-size="8.5">PostgreSQL EXPLAIN ANALYZE</text>
+  </g>
+
+  <!-- Human-in-the-Loop Gate Card -->
+  <g transform="translate(594, 256)">
+    <rect x="0" y="0" width="176" height="160" rx="8" fill="rgba(30, 27, 75, 0.6)" stroke="#f59e0b" stroke-width="1.2"/>
+    <text x="12" y="20" fill="#fde68a" font-family="monospace" font-size="9.5" font-weight="700">HUMAN APPROVAL GATE</text>
+    <text x="12" y="36" fill="#94a3b8" font-family="monospace" font-size="8">Action: Apply Concurrently</text>
+    <text x="12" y="48" fill="#94a3b8" font-family="monospace" font-size="8">Risk: Low | Reversible: Yes</text>
+
+    <rect x="12" y="60" width="152" height="30" rx="6" fill="#0f172a" stroke="rgba(255,255,255,0.1)"/>
+    <text x="88" y="79" text-anchor="middle" fill="#00f0ff" font-family="monospace" font-size="8.5">CREATE INDEX CONCURRENTLY</text>
+
+    <rect x="12" y="104" width="70" height="26" rx="5" fill="#10b981"/>
+    <text x="47" y="121" text-anchor="middle" fill="#022c22" font-family="monospace" font-size="9" font-weight="700">APPROVE</text>
+
+    <rect x="94" y="104" width="70" height="26" rx="5" fill="#ef4444"/>
+    <text x="129" y="121" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="9" font-weight="700">REJECT</text>
+
+    <text x="88" y="148" text-anchor="middle" fill="#a7f3d0" font-family="monospace" font-size="8">&bull; Zero-Trust Access Verified</text>
+  </g>
+</svg>
