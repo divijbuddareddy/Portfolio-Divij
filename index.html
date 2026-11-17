@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="clay">
+<html lang="en" data-theme="cyan">
 
 <head>
   <meta charset="UTF-8">
@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 
   <!-- Font Awesome Icons -->
@@ -44,7 +44,8 @@
   <div class="custom-cursor-follower"></div>
 
   <!-- Interactive Background Canvas (Neural Particle Network) -->
-  
+  <canvas id="neural-canvas"></canvas>
+
   <!-- Ambient Glow Blobs -->
   <div class="ambient-glow top-left"></div>
   <div class="ambient-glow bottom-right"></div>
@@ -76,9 +77,9 @@
       <div class="nav-actions">
         <!-- Interactive Theme Palette Switcher -->
         <div class="theme-switch-wrapper" title="Switch Theme Glow Color">
-          <button class="theme-dot clay" data-theme="clay" aria-label="Clay Accent"></button>
-          <button class="theme-dot sage" data-theme="sage" aria-label="Sage Accent"></button>
-          <button class="theme-dot ink" data-theme="ink" aria-label="Ink Blue Accent"></button>
+          <button class="theme-dot cyan" data-theme="cyan" aria-label="Cyan Accent"></button>
+          <button class="theme-dot purple" data-theme="purple" aria-label="Purple Accent"></button>
+          <button class="theme-dot emerald" data-theme="emerald" aria-label="Emerald Accent"></button>
         </div>
 
         <a href="Divij_Buddareddy_Resume.pdf" target="_blank" class="btn btn-outline btn-sm btn-glow"
@@ -1125,7 +1126,8 @@
   <div id="toast-notice" class="toast-notice"></div>
 
   <!-- Scripts -->
-    <script src="js/terminal.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/terminal.js"></script>
   <script src="js/main.js"></script>
 </body>
 
