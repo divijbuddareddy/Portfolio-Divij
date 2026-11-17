@@ -41,7 +41,7 @@
     contact: [
       "Email: divijbuddareddy@gmail.com",
       "Phone: +91-7013037779",
-      "Location: Rayadurg, Andhra Pradesh, India",
+      "Location: Bangalore, Karnataka, India",
       "GitHub: https://github.com/ | LinkedIn: Connected"
     ]
   };
