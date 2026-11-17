@@ -24,7 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
    =================================================================== */
 function initThemeSwitcher() {
   const themeDots = document.querySelectorAll('.theme-dot');
-  const savedTheme = localStorage.getItem('divij-portfolio-theme') || 'cyan';
+  const validThemes = ['clay', 'sage', 'ink'];
+  const storedTheme = localStorage.getItem('divij-portfolio-theme');
+  const savedTheme = validThemes.includes(storedTheme) ? storedTheme : 'clay';
 
   document.documentElement.setAttribute('data-theme', savedTheme);
 

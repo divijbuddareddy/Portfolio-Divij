@@ -182,7 +182,7 @@
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  background: linear-gradient(135deg, var(--primary-accent), var(--secondary-accent), var(--accent-pink), var(--primary-accent));
+  background: linear-gradient(135deg, var(--primary-accent), var(--secondary-accent), var(--primary-accent));
   background-size: 300% 300%;
   animation: gradient-border 6s ease infinite;
   z-index: -1;
